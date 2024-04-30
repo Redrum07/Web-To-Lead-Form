@@ -1,10 +1,19 @@
-function beforesubmit(){
-    let outputDate = document.querySelector('.outputdate');
-    let inputDate = document.querySelector('.inputdate');
-    console.log(inputDate.value)
-    let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN");
-    outputDate.value = formattedDate;
-    console.log(outputDate);
+
+let captcha = false;
+
+function beforesubmit(event){
+    if(captcha){
+        let outputDate = document.querySelector('.outputdate');
+        let inputDate = document.querySelector('.inputdate');
+        
+        let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN");
+        outputDate.value = formattedDate;
+        
+    }
+    else{
+        alert("Please Check the reCaptcha in order to submit.")
+        event.preventDefault();
+    }
     }
 
 
@@ -16,3 +25,10 @@ function beforesubmit(){
             document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
         } 
     } setInterval(timestamp, 500);
+
+    
+    function captchasuccess(){
+        
+            captcha = true;
+        
+    }
