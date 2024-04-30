@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet " href="style.css">
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
    
@@ -18,6 +19,7 @@
     <input type=hidden name="oid" value="00D5i00000DX1pm">
     <input type=hidden name="retURL"  value="https://redrum07.github.io/Web-To-Lead-Form/success.html">
     <input type=hidden name="LeadDate__c" class="outputdate">
+    <input type=hidden name='captcha_settings' value='{"keyname":"Web_To_Lead","fallback":"true","orgId":"00D5i00000DX1pm","ts":""}'>
 
     
     <label for="first_name">First Name</label>
@@ -35,7 +37,7 @@
     
      <label for="email">Lead Date</label>
      <input type="date" required="true" class="inputdate">
-    
+     <div class="g-recaptcha" data-sitekey="6LcAa8wpAAAAAOkARYvRd_VfLOqdXCepiq23Oc5W"></div><br>
     <input type="submit" name="submit" class="btn">
     
     </form>

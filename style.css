@@ -29,8 +29,12 @@ form{
 }
 
 .btn{
-    margin: 15px auto 0 auto; 
+    margin: 1px  auto 0 auto; 
     max-width: 120px;  
     background-color: palegreen;
     border-radius: 5px;
+}
+
+div{
+    margin: 15px auto 0 auto; 
 }
